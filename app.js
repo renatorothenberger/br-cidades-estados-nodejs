@@ -3,6 +3,8 @@ const server = jsonServer.create()
 const router = jsonServer.router('db.json')
 const middlewares = jsonServer.defaults()
 
+
+
 server.all('*', (req, res, next) => {
   if (req.method !== 'GET') {
     res.status(403).jsonp({
