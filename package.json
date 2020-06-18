@@ -20,7 +20,7 @@
   "main": "app.js",
   "scripts": {
     "start:dev": "nodemon app.js",
-    "start": "node app.js",
+    "start": "pm2 start app.js --name api-enderecos",
     "test:dev": "nodemon --timeout 10000 --watch . --exec 'mocha ./test/index.js --exit || true'",
     "test": "mocha --timeout 10000 --exit",
     "snyk-protect": "snyk protect",
